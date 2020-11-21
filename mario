@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <cs50.h>
+
+int main(void)
+{
+    int chosen_number;
+        do
+    {
+        chosen_number = get_int("Height:");
+        //printf("You chose %i\n", number_chosen);
+    }
+
+    while (chosen_number <1 || chosen_number >8);
+
+
+    for (int i = chosen_number; i >= 1; i--)
+    {
+        for (int j = 1; j < i; j++)
+            printf(" ");
+
+
+        for (int k = chosen_number; k >= i; k--)
+            printf("#");
+
+        printf("\n");
+    }
+}
